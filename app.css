@@ -326,6 +326,110 @@ body {
   color: var(--sfg);
 }
 
+.todoBlock {
+  background: var(--accent-bg, #232946);
+  border-radius: 1.2em;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  padding: 2em 1.5em 1.5em 1.5em;
+  margin: 1.5em 0;
+  max-width: 350px;
+  width: 100%;
+  min-width: 220px;
+  color: var(--text, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  flex: 1 1 0;
+}
+@media (max-width: 600px) {
+  .todoBlock {
+    max-width: 100vw;
+    min-width: 0;
+    padding: 1em 0.5em 1em 0.5em;
+    margin: 1em 0;
+  }
+}
+.todo-header {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.todo-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  color: var(--text, #fff);
+}
+.todo-input-row {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+#todoInput {
+  flex: 1;
+  padding: 0.6em 1em;
+  border-radius: 0.7em;
+  border: none;
+  font-size: 1em;
+  background: var(--input-bg, #121629);
+  color: var(--text, #fff);
+  box-sizing: border-box;
+}
+#todoAddBtn {
+  background: var(--primary, #eebbc3);
+  color: #232946;
+  border: none;
+  border-radius: 0.7em;
+  padding: 0 1.2em;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 2.5em;
+  min-width: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#todoAddBtn:hover {
+  background: var(--primary-hover, #d18ba0);
+}
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.todo-item {
+  background: var(--input-bg, #121629);
+  border-radius: 0.7em;
+  padding: 0.7em 1em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+  transition: background 0.2s;
+  color: var(--text, #fff);
+  width: 100%;
+  box-sizing: border-box;
+}
+.todo-item.done span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.todo-item button {
+  background: none;
+  border: none;
+  color: var(--primary, #eebbc3);
+  font-size: 1.1em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.todo-item button:hover {
+  color: var(--primary-hover, #d18ba0);
+}
+
 /* M E D I A - Q U E R I E S */
 
 @media only screen and (max-width: 68.75em) {

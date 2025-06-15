@@ -15,7 +15,6 @@ weather.temperature = {
 var tempUnit = CONFIG.weatherUnit;
 
 const KELVIN = 273.15;
-const key = `${CONFIG.weatherKey}`;
 setPosition();
 
 function setPosition(position) {
@@ -37,22 +36,39 @@ function setPosition(position) {
 	);
 }
 
+// Replace OpenWeatherMap with wttr.in (no API key required) and add caching
+
 function getWeather(latitude, longitude) {
-	let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=${CONFIG.language}&appid=${key}`;
-	fetch(api)
-		.then(function(response) {
-			let data = response.json();
-			return data;
-		})
-		.then(function(data) {
-			let celsius = Math.floor(data.main.temp - KELVIN);
-			weather.temperature.value = tempUnit == 'C' ? celsius : (celsius * 9) / 5 + 32;
-			weather.description = data.weather[0].description;
-			weather.iconId = data.weather[0].icon;
-		})
-		.then(function() {
-			displayWeather();
+	const cacheKey = `weather_${latitude}_${longitude}`;
+	const cache = localStorage.getItem(cacheKey);
+	const now = Date.now();
+	if (cache) {
+		const cachedData = JSON.parse(cache);
+		if (now - cachedData.timestamp < 10 * 60 * 1000) { // 10 minutes
+			setWeatherFromData(cachedData.data);
+			return;
+		}
+	}
+	// wttr.in returns weather info as JSON, no API key needed
+	const url = `https://wttr.in/${latitude},${longitude}?format=j1`;
+	fetch(url)
+		.then(response => response.json())
+		.then(data => {
+			localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: now }));
+			setWeatherFromData(data);
 		});
+}
+
+function setWeatherFromData(data) {
+	if (!data || !data.current_condition || !data.current_condition[0]) return;
+	const current = data.current_condition[0];
+	const celsius = parseInt(current.temp_C, 10);
+	const fahrenheit = parseInt(current.temp_F, 10);
+	weather.temperature.value = tempUnit == 'C' ? celsius : fahrenheit;
+	weather.description = current.weatherDesc[0].value;
+	// Use a generic icon for wttr.in (or map condition to your icons if desired)
+	weather.iconId = 'unknown';
+	displayWeather();
 }
 
 function displayWeather() {

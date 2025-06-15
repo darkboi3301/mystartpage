@@ -11,7 +11,7 @@ const CONFIG = {
 	// └─┘┴ ┴└─┘┴└─┘└─┘
 
 	// General
-	name: 'Student',
+	name: 'Eesh',
 	imageBackground: false,
 	openInNewTab: true,
 	twelveHourFormat: true,
@@ -32,8 +32,8 @@ const CONFIG = {
 	language: 'en', // More languages in https://openweathermap.org/current#multi
 
 	trackLocation: true, // If false or an error occurs, the app will use the lat/lon below
-	defaultLatitude: '37.775',
-	defaultLongitude: '-122.419',
+	defaultLatitude: '13.0827',
+	defaultLongitude: '80.2707',
 
 	// Autochange
 	autoChangeTheme: true,
@@ -83,9 +83,9 @@ const CONFIG = {
 		},
 		{
 			id: '6',
-			name: 'Localhost 3000',
+			name: 'roadmap',
 			icon: 'server',
-			link: 'http://localhost:3000/',
+			link: 'http://roadmap.sh/',
 		},
 	],
 
