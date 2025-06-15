@@ -11,16 +11,16 @@ const CONFIG = {
 	// └─┘┴ ┴└─┘┴└─┘└─┘
 
 	// General
-	name: 'John',
+	name: 'Eesh',
 	imageBackground: false,
 	openInNewTab: true,
-	twelveHourFormat: false,
+	twelveHourFormat: true,
 
 	// Greetings
 	greetingMorning: 'Good morning!',
 	greetingAfternoon: 'Good afternoon,',
 	greetingEvening: 'Good evening,',
-	greetingNight: 'Go to Sleep!',
+	greetingNight: 'Time to get some Sleep!',
 
 	// Layout
 	bentoLayout: 'bento', // 'bento', 'lists', 'buttons'
@@ -55,38 +55,40 @@ const CONFIG = {
 			id: '1',
 			name: 'Github',
 			icon: 'github',
-			link: 'https://github.com/',
+			link: 'https://github.com/darkboi3301',
 		},
 		{
 			id: '2',
 			name: 'Mail',
 			icon: 'mail',
-			link: 'https://mail.protonmail.com/',
+			link: 'https://mail.google.com/',
 		},
 		{
-			id: '3',
-			name: 'Todoist',
-			icon: 'trello',
-			link: 'https://todoist.com',
+			id:3,
+			name: 'Mail 2',
+			icon: 'mail',
+			link: 'https://outlook.live.com/mail/',
+
 		},
-		{
-			id: '4',
-			name: 'Calendar',
-			icon: 'calendar',
-			link: 'https://calendar.google.com/calendar/r',
-		},
-		{
-			id: '5',
-			name: 'Reddit',
-			icon: 'glasses',
-			link: 'https://reddit.com',
-		},
-		{
-			id: '6',
-			name: 'Odysee',
-			icon: 'youtube',
-			link: 'https://odysee.com/',
-		},
+		// {
+		// 	id: '3',
+		// 	name: 'Todoist',
+		// 	icon: 'trello',
+		// 	link: 'https://todoist.com',
+		// },
+		// {
+		// 	id: '4',
+		// 	name: 'Calendar',
+		// 	icon: 'calendar',
+		// 	link: 'https://calendar.google.com/calendar/r',
+		// },
+		// {
+		// 	id: '5',
+		// 	name: 'Reddit',
+		// 	icon: 'glasses',
+		// 	link: 'https://reddit.com',
+		// },
+
 	],
 
 	secondButtonsContainer: [
@@ -94,7 +96,7 @@ const CONFIG = {
 			id: '1',
 			name: 'Music',
 			icon: 'headphones',
-			link: 'https://open.spotify.com',
+			link: 'https://open.spotify.com'
 		},
 		{
 			id: '2',
