@@ -66,7 +66,11 @@ function setWeatherFromData(data) {
 	const fahrenheit = parseInt(current.temp_F, 10);
 	weather.temperature.value = tempUnit == 'C' ? celsius : fahrenheit;
 	weather.description = current.weatherDesc[0].value;
-	// Use a generic icon for wttr.in (or map condition to your icons if desired)
+	weather.city = data.nearest_area && data.nearest_area[0] && data.nearest_area[0].areaName[0].value ? data.nearest_area[0].areaName[0].value : '';
+	weather.region = data.nearest_area && data.nearest_area[0] && data.nearest_area[0].region[0].value ? data.nearest_area[0].region[0].value : '';
+	weather.country = data.nearest_area && data.nearest_area[0] && data.nearest_area[0].country[0].value ? data.nearest_area[0].country[0].value : '';
+	weather.feelsLike = tempUnit == 'C' ? current.FeelsLikeC : current.FeelsLikeF;
+	weather.humidity = current.humidity;
 	weather.iconId = 'unknown';
 	displayWeather();
 }
@@ -74,5 +78,5 @@ function setWeatherFromData(data) {
 function displayWeather() {
 	iconElement.innerHTML = `<img src="assets/icons/${CONFIG.weatherIcons}/${weather.iconId}.png"/>`;
 	tempElement.innerHTML = `${weather.temperature.value.toFixed(0)}°<span class="darkfg">${tempUnit}</span>`;
-	descElement.innerHTML = weather.description;
+	descElement.innerHTML = `${weather.city}<br><span style='font-size:0.95em;'>Feels like: ${weather.feelsLike}°${tempUnit}, Humidity: ${weather.humidity}%</span>`;
 }
