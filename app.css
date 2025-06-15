@@ -13,7 +13,7 @@
   --fg-primary: 12vh; /* Time and Greetings */
   --fg-secondary: 3vh; /* Greetings and Weather widger */
   --fg-date: 8vh; /* Date */
-  --fg-list: 2vh; /* Links List */
+  --fg-list: 1.7vh; /* Links List */
   --icon: 3vh; /* Icon Size */
 
   /* Fonts Color */
@@ -35,8 +35,8 @@
 
 .darktheme {
   /* Dark Colors  */
-  --accent: #57a0d9; /* Hover color */
-  --background: #19171a; /* Background color */
+  --accent: #585858; /* Hover color */
+  --background: #111011; /* Background color */
   --cards: #201e21; /* Cards color */
 
   /* Fonts Color */
@@ -110,7 +110,7 @@ body {
 .card {
   background-color: var(--cards);
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.35);
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .card:hover {
@@ -316,7 +316,7 @@ body {
   color: var(--fg);
   margin-top: 1vh;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: bold;
   text-align: center;
   width: 80%;

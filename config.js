@@ -11,16 +11,16 @@ const CONFIG = {
 	// └─┘┴ ┴└─┘┴└─┘└─┘
 
 	// General
-	name: 'Eesh',
+	name: 'Student',
 	imageBackground: false,
 	openInNewTab: true,
 	twelveHourFormat: true,
 
 	// Greetings
-	greetingMorning: 'Good morning!',
-	greetingAfternoon: 'Good afternoon,',
-	greetingEvening: 'Good evening,',
-	greetingNight: 'Time to get some Sleep!',
+	greetingMorning: 'Ready to break some systems? Good morning!',
+	greetingAfternoon: 'Keep going! Good afternoon,',
+	greetingEvening: 'Stay productive! Good evening,',
+	greetingNight: 'Its time to rest up! Good night,',
 
 	// Layout
 	bentoLayout: 'bento', // 'bento', 'lists', 'buttons'
@@ -53,74 +53,72 @@ const CONFIG = {
 	firstButtonsContainer: [
 		{
 			id: '1',
-			name: 'Github',
+			name: 'GitHub',
 			icon: 'github',
-			link: 'https://github.com/darkboi3301',
+			link: 'https://github.com/',
 		},
 		{
 			id: '2',
-			name: 'Mail',
+			name: 'Gmail',
 			icon: 'mail',
 			link: 'https://mail.google.com/',
 		},
 		{
-			id:3,
-			name: 'Mail 2',
+			id: '3',
+			name: 'SpaceMail',
 			icon: 'mail',
-			link: 'https://outlook.live.com/mail/',
-
+			link: 'https://spacemail.com/',
 		},
-		// {
-		// 	id: '3',
-		// 	name: 'Todoist',
-		// 	icon: 'trello',
-		// 	link: 'https://todoist.com',
-		// },
-		// {
-		// 	id: '4',
-		// 	name: 'Calendar',
-		// 	icon: 'calendar',
-		// 	link: 'https://calendar.google.com/calendar/r',
-		// },
-		// {
-		// 	id: '5',
-		// 	name: 'Reddit',
-		// 	icon: 'glasses',
-		// 	link: 'https://reddit.com',
-		// },
-
+		{
+			id: '4',
+			name: 'Cloudflare Dash',
+			icon: 'cloud',
+			link: 'https://dash.cloudflare.com/',
+		},
+		{
+			id: '5',
+			name: 'YouTube',
+			icon: 'youtube',
+			link: 'https://youtube.com/',
+		},
+		{
+			id: '6',
+			name: 'Localhost 3000',
+			icon: 'server',
+			link: 'http://localhost:3000/',
+		},
 	],
 
 	secondButtonsContainer: [
 		{
 			id: '1',
-			name: 'Music',
+			name: 'Spotify',
 			icon: 'headphones',
-			link: 'https://open.spotify.com'
+			link: 'https://open.spotify.com',
 		},
 		{
 			id: '2',
-			name: 'twitter',
-			icon: 'twitter',
-			link: 'https://twitter.com/',
+			name: 'Stack Overflow',
+			icon: 'stack-overflow',
+			link: 'https://stackoverflow.com/',
 		},
 		{
 			id: '3',
-			name: 'bot',
+			name: 'Discord',
 			icon: 'bot',
 			link: 'https://discord.com/app',
 		},
 		{
 			id: '4',
-			name: 'Amazon',
+			name: 'Amazon Books',
 			icon: 'shopping-bag',
-			link: 'https://amazon.com/',
+			link: 'https://amazon.com/books-used-books-textbooks/b/?ie=UTF8&node=283155',
 		},
 		{
 			id: '5',
-			name: 'Hashnode',
+			name: 'Khan Academy',
 			icon: 'pen-tool',
-			link: 'https://hashnode.com/',
+			link: 'https://khanacademy.org/',
 		},
 		{
 			id: '6',
@@ -137,46 +135,46 @@ const CONFIG = {
 	// First Links Container
 	firstlistsContainer: [
 		{
-			icon: 'music',
+			icon: 'book',
 			id: '1',
 			links: [
 				{
-					name: 'Inspirational',
-					link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+					name: 'SRM Portal',
+					link: 'https://sp.srmist.edu.in/',
 				},
 				{
-					name: 'Classic',
-					link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+					name: 'Haveloc',
+					link: 'https://app.haveloc.com/',
 				},
 				{
-					name: 'Oldies',
-					link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+					name: 'LeetCode',
+					link: 'https://leetcode.com/',
 				},
 				{
-					name: 'Rock',
-					link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+					name: 'Supabase',
+					link: 'https://supabase.com/',
 				},
 			],
 		},
 		{
-			icon: 'coffee',
+			icon: 'server',
 			id: '2',
 			links: [
 				{
-					name: 'Linkedin',
-					link: 'https://www.linkedin.com',
+					name: 'localhost:3000 (React)',
+					link: 'http://localhost:3000/',
 				},
 				{
-					name: 'Dribbble',
-					link: 'https://www.dribbble.com',
+					name: 'localhost:8000 (Django)',
+					link: 'http://localhost:8000/',
 				},
 				{
-					name: 'Trello',
-					link: 'https://www.trello.com',
+					name: 'localhost:8080 (proxy)',
+					link: 'http://localhost:8080/',
 				},
 				{
-					name: 'Slack',
-					link: 'https://www.slack.com',
+					name: 'localhost:8834 (Nessus)',
+					link: 'https://localhost:8834/',
 				},
 			],
 		},
@@ -184,47 +182,26 @@ const CONFIG = {
 
 	// Second Links Container
 	secondListsContainer: [
-		{
-			icon: 'binary',
-			id: '1',
-			links: [
-				{
-					name: 'Spotify',
-					link: 'https://www.spotify.com',
-				},
-				{
-					name: 'Reddit',
-					link: 'https://www.reddit.com',
-				},
-				{
-					name: 'Hashnode',
-					link: 'https://www.hashnode.com',
-				},
-				{
-					name: 'Pocket',
-					link: 'https://www.pocket.com',
-				},
-			],
-		},
+
 		{
 			icon: 'github',
 			id: '2',
 			links: [
 				{
-					name: 'Front',
-					link: 'https://www.reddit.com/r/Frontend/',
+					name: 'Frontend Mentor',
+					link: 'https://www.frontendmentor.io/',
 				},
 				{
-					name: 'Rust',
-					link: 'https://www.reddit.com/r/rust/',
+					name: 'LeetCode',
+					link: 'https://leetcode.com/',
 				},
 				{
-					name: 'Go',
-					link: 'https://www.reddit.com/r/golang/',
+					name: 'GeeksforGeeks',
+					link: 'https://www.geeksforgeeks.org/',
 				},
 				{
-					name: 'Repos',
-					link: 'https://github.com/migueravila',
+					name: 'GitHub',
+					link: 'https://github.com/',
 				},
 			],
 		},
